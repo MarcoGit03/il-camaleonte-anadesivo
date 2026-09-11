@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Il Camaleonte Anadesivo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,600;1,700&family=Caveat:wght@600;700&display=swap">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="styles.css">
+<!-- ============ HEADER ============ -->
+<header class="relative" style="background:var(--paper); z-index:2;">
+  <div class="wrap py-4 flex items-center">
+    <img src="shackleton-logo-color.png" alt="Shackleton Group" class="h-11 md:h-16 w-auto" style="object-fit:contain;">
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="hero" class="relative overflow-hidden" style="background:radial-gradient(ellipse 120% 80% at 50% -10%, var(--paper-2), var(--paper) 60%);">
+
+  <!-- parallax color wash (slowest layer) -->
+  <div class="doodle-wrap inset-0" data-parallax="0.12" style="z-index:0;">
+    <div class="wash" style="left:-6%; top:6%; width:280px; height:280px; background:var(--pink); opacity:.28;"></div>
+    <div class="wash" style="right:-4%; top:28%; width:240px; height:240px; background:var(--gold); opacity:.24;"></div>
+    <div class="wash" style="left:22%; bottom:-8%; width:260px; height:260px; background:var(--teal); opacity:.2;"></div>
+  </div>
+
+  <div class="wrap relative pt-14 pb-24 md:pt-20 md:pb-28" style="z-index:1;">
+
+    <!-- floating doodles (own parallax depth) -->
+    <div class="doodle-wrap hidden sm:block" style="left:4%; top:10%; width:54px;" data-parallax="0.3">
+      <svg class="doodle sway d1" style="--r:-8deg; color:var(--leaf);" viewBox="0 0 40 40" fill="none"><path d="M20 4c10 2 16 10 16 18-8 4-18 2-22-6C10 10 12 5 20 4Z" fill="currentColor" opacity=".9"/><path d="M20 6c4 8 4 16-2 28" stroke="var(--paper)" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </div>
+    <div class="doodle-wrap hidden md:block" style="right:8%; top:2%; width:38px;" data-parallax="0.42">
+      <svg class="doodle twinkle d3" style="--r:10deg; color:var(--gold);" viewBox="0 0 40 40"><path d="M20 2c1.5 6 3 7.5 9 9-6 1.5-7.5 3-9 9-1.5-6-3-7.5-9-9 6-1.5 7.5-3 9-9Z" fill="currentColor"/></svg>
+    </div>
+    <div class="doodle-wrap hidden sm:block" style="left:1%; bottom:10%; width:46px;" data-parallax="0.22">
+      <svg class="doodle soft d2" style="--r:6deg; color:var(--berry);" viewBox="0 0 40 40"><path d="M20 2c1.5 6 3 7.5 9 9-6 1.5-7.5 3-9 9-1.5-6-3-7.5-9-9 6-1.5 7.5-3 9-9Z" fill="currentColor"/></svg>
+    </div>
+    <div class="doodle-wrap hidden md:block" style="right:4%; bottom:16%; width:56px;" data-parallax="0.36">
+      <svg class="doodle sway d4" style="--r:-10deg; color:var(--teal);" viewBox="0 0 40 40" fill="none"><path d="M20 4c10 2 16 10 16 18-8 4-18 2-22-6C10 10 12 5 20 4Z" fill="currentColor" opacity=".9"/><path d="M20 6c4 8 4 16-2 28" stroke="var(--paper)" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </div>
+    <div class="doodle-wrap hidden lg:block" style="right:22%; top:14%; width:52px;" data-parallax="0.4">
+      <svg class="doodle drift d5" style="color:var(--lilac); opacity:.85;" viewBox="0 0 64 36"><g fill="currentColor"><circle cx="18" cy="20" r="10"/><circle cx="30" cy="13" r="12"/><circle cx="43" cy="19" r="9"/><rect x="14" y="19" width="34" height="12" rx="6"/></g></svg>
+    </div>
+    <div class="doodle-wrap hidden lg:block" style="left:14%; top:2%; width:26px;" data-parallax="0.5">
+      <svg class="doodle twinkle d6" style="--r:-6deg; color:var(--sky);" viewBox="0 0 40 40"><path d="M20 2c1.5 6 3 7.5 9 9-6 1.5-7.5 3-9 9-1.5-6-3-7.5-9-9 6-1.5 7.5-3 9-9Z" fill="currentColor"/></svg>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-12 md:gap-8 items-center relative">
+      <div class="stagger relative z-10 text-center md:text-left" data-parallax="0.05">
+        <span class="stagger-item hand inline-block text-2xl md:text-3xl mb-1" style="--i:0; color:var(--teal);">Una raccolta di fiabe da ridere, leggere e colorare</span>
+        <h1 class="stagger-item display text-[2.6rem] leading-[1.05] sm:text-6xl md:text-6xl font-extrabold mt-2" style="--i:1; color:var(--ink);">
+          Il <span style="color:var(--coral);">Camaleonte</span><br>
+          <span style="color:var(--leaf);">Anadesivo</span>
+        </h1>
+        <p class="stagger-item mt-4 text-lg md:text-xl" style="--i:2; color:var(--ink-soft);">e altri animali improbabili da leggere e colorare</p>
+        <p class="stagger-item mt-1 font-bold" style="--i:3; color:var(--ink);">di Lino Giorgini e Nicola Posa</p>
+
+        <div class="stagger-item mt-8 flex flex-wrap gap-4 justify-center md:justify-start" style="--i:4;">
+          <a href="#storia" class="btn btn-primary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 4h13a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3V4Z" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="M4 17a3 3 0 0 1 3-3h13" stroke="#fff" stroke-width="2"/></svg>
+            Scopri il libro
+          </a>
+          <a href="#acquista" class="btn btn-outline">
+            Acquista ora
+          </a>
+        </div>
+      </div>
+
+      <div class="relative flex justify-center md:justify-end" data-parallax="0.18">
+        <div class="relative" style="transform:rotate(3deg);">
+          <div class="absolute -inset-3 rounded-[2rem]" style="background:var(--gold); transform:rotate(-4deg); opacity:.5;"></div>
+          <div class="absolute -inset-3 rounded-[2rem]" style="background:var(--berry); transform:rotate(6deg); opacity:.22;"></div>
+          <img src="cover.jpg" alt="Copertina del libro Il Camaleonte Anadesivo: un camaleonte verde a bocca aperta circondato da foglie, con il titolo scritto a lettere colorate e matite colorate sul lato sinistro."
+            class="relative rounded-[1.6rem] w-[280px] sm:w-[340px] md:w-[400px] shadow-2xl ring-4"
+            style="ring-color:var(--paper); box-shadow:0 24px 50px -12px rgba(43,20,10,.45);">
+          <svg class="doodle absolute -bottom-6 -left-7 w-16 sm:w-20" style="--r:-14deg; color:var(--coral);" viewBox="0 0 40 100" fill="none">
+            <rect x="14" y="0" width="12" height="70" rx="4" fill="currentColor"/>
+            <path d="M14 70 L20 96 L26 70 Z" fill="#F2CBA0"/>
+            <path d="M18 84 L20 92 L22 84 Z" fill="#4a3222"/>
+          </svg>
+          <svg class="doodle soft absolute -top-5 -right-6 w-12" style="--r:14deg; color:var(--sun);" viewBox="0 0 40 40"><path d="M20 2c1.5 6 3 7.5 9 9-6 1.5-7.5 3-9 9-1.5-6-3-7.5-9-9 6-1.5 7.5-3 9-9Z" fill="currentColor"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <svg class="block w-full relative" style="height:64px; color:var(--paper-2); z-index:1;" viewBox="0 0 1440 60" preserveAspectRatio="none">
+    <path fill="currentColor" d="M0,30 Q80,10 160,30 T320,30 T480,30 T640,30 T800,30 T960,30 T1120,30 T1280,30 T1440,30 L1440,60 L0,60 Z"/>
+  </svg>
+</section>
+
+<!-- ============ ABOUT / STORIA ============ -->
+<section id="storia" class="relative overflow-hidden" style="background:var(--paper-2);">
+  <div class="wash" style="right:-5%; top:-6%; width:300px; height:300px; background:var(--mint,var(--teal)); opacity:.2;"></div>
+  <div class="wash" style="left:-6%; bottom:0; width:260px; height:260px; background:var(--gold); opacity:.18;"></div>
+
+  <div class="doodle-wrap hidden lg:block" style="right:6%; top:8%; width:58px;">
+    <svg class="doodle drift" style="color:var(--sky); opacity:.85;" viewBox="0 0 64 36"><g fill="currentColor"><circle cx="18" cy="20" r="10"/><circle cx="30" cy="13" r="12"/><circle cx="43" cy="19" r="9"/><rect x="14" y="19" width="34" height="12" rx="6"/></g></svg>
+  </div>
+  <div class="doodle-wrap hidden md:block" style="left:5%; top:14%; width:30px;">
+    <svg class="doodle twinkle" style="--r:4deg; color:var(--gold);" viewBox="0 0 40 40"><path d="M20 2c1.5 6 3 7.5 9 9-6 1.5-7.5 3-9 9-1.5-6-3-7.5-9-9 6-1.5 7.5-3 9-9Z" fill="currentColor"/></svg>
+  </div>
+  <div class="doodle-wrap hidden sm:block" style="right:3%; bottom:8%; width:40px;">
+    <svg class="doodle sway" style="--r:8deg; color:var(--leaf);" viewBox="0 0 40 40" fill="none"><path d="M20 4c10 2 16 10 16 18-8 4-18 2-22-6C10 10 12 5 20 4Z" fill="currentColor" opacity=".85"/></svg>
+  </div>
+
+  <div class="wrap py-16 md:py-24 relative" style="z-index:1;">
+    <div class="stagger max-w-3xl mx-auto text-center">
+      <span class="stagger-item hand text-2xl" style="--i:0; color:var(--sky);">di cosa parla</span>
+      <h2 class="stagger-item display text-4xl md:text-5xl font-bold mt-1" style="--i:1; color:var(--ink);">Una fiaba che si appiccica addosso</h2>
+      <p class="stagger-item mt-6 text-lg leading-relaxed" style="--i:2; color:var(--ink-soft);">
+        Su un'isola che cambia forma con le maree vive Giancarlo, un camaleonte speciale: a differenza dei suoi cugini, non si attacca a nulla — scivola via da ogni superficie, etichetta o legame. Gli altri animali lo giudicano "anormale" e gli propongono soluzioni (una presa, una colla), ma Giancarlo non è triste: è curioso. Rotolando di continuo, scopre mondi nascosti e microscopici — formiche musiciste, biblioteche segrete, lumache poetesse — e impara che si può essere sempre a casa senza avere una casa fissa. Un giorno incontra una bambina triste perché "tutto è anadesivo": il gelato si scioglie, i giocattoli si rompono, il papà è lontano. Giancarlo le sale sulla spalla e poi scivola via, facendola ridere — e insegnandole che anche ciò che non si attacca può restare dentro, leggero e libero.
+      </p>
+      <p class="stagger-item mt-4 text-lg leading-relaxed" style="--i:3; color:var(--ink-soft);">
+        Ogni storia si conclude con una pagina tutta da colorare: matite alla mano, pronti a dare al Camaleonte Anadesivo — e ai suoi amici — i colori che si merita.
+      </p>
+      <div class="stagger-item mt-6" style="--i:4;">
+        <a href="colora.html" class="btn btn-primary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#fff" stroke-width="2"/><circle cx="9" cy="10" r="1.4" fill="#fff"/><circle cx="14" cy="9" r="1.4" fill="#fff"/><circle cx="15" cy="14" r="1.4" fill="#fff"/><circle cx="10" cy="15" r="1.4" fill="#fff"/></svg>
+          Colora il Camaleonte
+        </a>
+      </div>
+    </div>
+  </div>
+  <svg class="block w-full relative" style="height:64px; color:var(--paper); z-index:1;" viewBox="0 0 1440 60" preserveAspectRatio="none">
+    <path fill="currentColor" d="M0,30 Q80,50 160,30 T320,30 T480,30 T640,30 T800,30 T960,30 T1120,30 T1280,30 T1440,30 L1440,60 L0,60 Z"/>
+  </svg>
+</section>
+
+<!-- ============ CHARACTERS ============ -->
+<section id="personaggi" class="relative overflow-hidden" style="background:var(--paper);">
+  <div class="wash" style="left:-6%; top:0; width:280px; height:280px; background:var(--berry); opacity:.14;"></div>
+  <div class="wash" style="right:-4%; bottom:-4%; width:300px; height:300px; background:var(--lilac); opacity:.18;"></div>
+
+  <div class="doodle-wrap hidden md:block" style="right:8%; top:4%; width:32px;">
+    <svg class="doodle twinkle" style="--r:-8deg; color:var(--berry);" viewBox="0 0 40 40"><path d="M20 2c1.5 6 3 7.5 9 9-6 1.5-7.5 3-9 9-1.5-6-3-7.5-9-9 6-1.5 7.5-3 9-9Z" fill="currentColor"/></svg>
+  </div>
+  <div class="doodle-wrap hidden sm:block" style="left:4%; bottom:6%; width:42px;">
+    <svg class="doodle sway" style="--r:-6deg; color:var(--lilac);" viewBox="0 0 40 40" fill="none"><path d="M20 4c10 2 16 10 16 18-8 4-18 2-22-6C10 10 12 5 20 4Z" fill="currentColor" opacity=".85"/></svg>
+  </div>
+
+  <div class="wrap py-16 md:py-24 relative" style="z-index:1;">
+    <div class="stagger text-center max-w-2xl mx-auto mb-14">
+      <span class="stagger-item hand text-2xl" style="--i:0; color:var(--plum);">chi incontrerai</span>
+      <h2 class="stagger-item display text-4xl md:text-5xl font-bold mt-1" style="--i:1;">Gli animali più improbabili del bosco</h2>
+    </div>
+
+    <div class="stagger grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <!-- card 1 -->
+      <article class="stagger-item card relative rounded-[1.75rem] p-7 pt-8" style="--i:0; background:var(--paper-2); border:3px solid var(--leaf); box-shadow:0 6px 0 -1px rgba(43,32,21,.08), 0 8px 18px -8px rgba(43,32,21,.2);">
+        <div class="icon-circle w-20 h-20 rounded-full flex items-center justify-center mb-5 mx-auto" style="background:var(--leaf-light);">
+          <svg width="46" height="46" viewBox="0 0 48 48" fill="none"><path d="M10 30c0-10 8-18 18-18 8 0 12 6 12 12s-4 9-9 9c-5 0-6-4-6-4" stroke="var(--leaf)" stroke-width="3.5" stroke-linecap="round" fill="none"/><circle cx="30" cy="16" r="2.4" fill="var(--ink)"/><circle cx="24" cy="14" r="2" fill="var(--ink)"/><path d="M12 30c-3 2-5 6-4 10" stroke="var(--leaf)" stroke-width="3.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3 class="display text-2xl font-bold text-center" style="color:var(--leaf);">Il Camaleonte Anadesivo</h3>
+        <p class="mt-3 text-center" style="color:var(--ink-soft);">Vivi l'avventura di Giancarlo, il camaleonte che non si attaccava mai.</p>
+      </article>
+
+      <!-- card 2 -->
+      <article class="stagger-item card relative rounded-[1.75rem] p-7 pt-8" style="--i:1; background:var(--paper-2); border:3px solid var(--gold); box-shadow:0 6px 0 -1px rgba(43,32,21,.08), 0 8px 18px -8px rgba(43,32,21,.2);">
+        <div class="icon-circle w-20 h-20 rounded-full flex items-center justify-center mb-5 mx-auto" style="background:var(--gold);">
+          <svg width="46" height="46" viewBox="0 0 48 48" fill="none">
+            <g stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 23c3 2.5 3 2.5 6 0s3-2.5 6 0 3 2.5 6 0 3-2.5 6 0 3 2.5 6 0"/>
+              <path d="M11 25v5M17 25.5v5M23 25v5M29 25.5v5M35 25v5"/>
+              <path d="M8 23l-3.5-3"/>
+            </g>
+            <circle cx="9" cy="21" r="1.6" fill="#fff"/>
+          </svg>
+        </div>
+        <h3 class="display text-2xl font-bold text-center" style="color:var(--coral-ink);">Il Millepiedi Claudicante</h3>
+        <p class="mt-3 text-center" style="color:var(--ink-soft);">Esplora il bosco di Cesare, il millepiedi che ogni tanto inciampava su sé stesso.</p>
+      </article>
+
+      <!-- card 3 -->
+      <article class="stagger-item card relative rounded-[1.75rem] p-7 pt-8" style="--i:2; background:var(--paper-2); border:3px solid var(--berry); box-shadow:0 6px 0 -1px rgba(43,32,21,.08), 0 8px 18px -8px rgba(43,32,21,.2);">
+        <div class="icon-circle w-20 h-20 rounded-full flex items-center justify-center mb-5 mx-auto" style="background:var(--pink);">
+          <svg width="46" height="46" viewBox="0 0 48 48" fill="none">
+            <g stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M13 27c-1-8 5-15 14-15 6 0 9 4 9 8 0 4.5-3.5 8-8 8-2 0-3.5-.7-3.5-.7"/>
+              <path d="M13 27c-1.5 3.5-1 7.5 2 10"/>
+              <path d="M34 20c3-.5 5.5-2.5 5.5-2.5s-.8 3-4 5"/>
+              <path d="M18 31c-3.5 2-7 2.3-10 .8"/>
+            </g>
+            <circle cx="27" cy="16" r="1.8" fill="#fff"/>
+          </svg>
+        </div>
+        <h3 class="display text-2xl font-bold text-center" style="color:var(--plum);">Il Pappagallo Balbuziente</h3>
+        <p class="mt-3 text-center" style="color:var(--ink-soft);">Scopri la storia di Pablo, il pappagallo che balbettando diceva sempre la verità.</p>
+      </article>
+
+      <!-- card 4: CTA -->
+      <a href="#acquista" class="stagger-item card no-underline relative rounded-[1.75rem] p-7 pt-8 flex flex-col items-center justify-center text-center" style="--i:3; background:var(--paper-2); border:3px dashed var(--coral); box-shadow:0 6px 0 -1px rgba(43,32,21,.08), 0 8px 18px -8px rgba(43,32,21,.2);">
+        <div class="icon-circle w-20 h-20 rounded-full flex items-center justify-center mb-5" style="background:var(--coral);">
+          <svg width="46" height="46" viewBox="0 0 48 48" fill="none"><path d="M12 24h22M26 15l9 9-9 9" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 class="display text-2xl font-bold" style="color:var(--coral-ink);">Scopri tutti gli altri animali improbabili...</h3>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ AUTORI ============ -->
+<section class="relative overflow-hidden" style="background:var(--paper-3);">
+  <svg class="block w-full -mb-px" style="height:56px; color:var(--paper);" viewBox="0 0 1440 56" preserveAspectRatio="none"><path fill="currentColor" d="M0,0 L1440,0 L1440,26 Q1360,46 1280,26 T1120,26 T960,26 T800,26 T640,26 T480,26 T320,26 T160,26 T0,26 Z"/></svg>
+
+  <div class="wash" style="right:-6%; top:10%; width:280px; height:280px; background:var(--lilac); opacity:.2;"></div>
+  <div class="wash" style="left:-5%; bottom:-6%; width:260px; height:260px; background:var(--leaf-light); opacity:.16;"></div>
+
+  <div class="doodle-wrap hidden lg:block" style="left:6%; top:6%; width:52px;">
+    <svg class="doodle drift" style="color:var(--teal); opacity:.8;" viewBox="0 0 64 36"><g fill="currentColor"><circle cx="18" cy="20" r="10"/><circle cx="30" cy="13" r="12"/><circle cx="43" cy="19" r="9"/><rect x="14" y="19" width="34" height="12" rx="6"/></g></svg>
+  </div>
+  <div class="doodle-wrap hidden md:block" style="right:5%; bottom:10%; width:28px;">
+    <svg class="doodle twinkle" style="--r:6deg; color:var(--sun);" viewBox="0 0 40 40"><path d="M20 2c1.5 6 3 7.5 9 9-6 1.5-7.5 3-9 9-1.5-6-3-7.5-9-9 6-1.5 7.5-3 9-9Z" fill="currentColor"/></svg>
+  </div>
+
+  <div class="wrap py-16 md:py-24 relative" style="z-index:1;">
+    <div class="stagger text-center max-w-2xl mx-auto mb-14">
+      <span class="stagger-item hand text-2xl" style="--i:0; color:var(--coral-ink);">gli autori</span>
+      <h2 class="stagger-item display text-4xl md:text-5xl font-bold mt-1" style="--i:1;">Chi ha dato vita a Giancarlo</h2>
+    </div>
+
+    <div class="stagger grid sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
+      <article class="stagger-item card relative rounded-[1.75rem] p-7 pt-8 text-center" style="--i:0; background:var(--paper); border:3px solid var(--leaf); box-shadow:0 6px 0 -1px rgba(43,32,21,.08), 0 8px 18px -8px rgba(43,32,21,.2);">
+        <img src="author-lino-giorgini.png" alt="Ritratto illustrato di Lino Giorgini" class="w-40 h-auto rounded-[1.25rem] mb-5 mx-auto" style="border:3px solid var(--leaf); background:#fff;">
+        <h3 class="display text-2xl font-bold" style="color:var(--leaf);">Lino Giorgini</h3>
+        <p class="hand text-lg mt-1" style="color:var(--ink-soft);">Autore</p>
+        <p class="mt-3 text-sm leading-relaxed text-left" style="color:var(--ink-soft);">Architetto, nel suo lavoro ha imparato a osservare gli spazi, le proporzioni, i dettagli e il modo in cui le persone abitano i luoghi. Questo sguardo preciso e insieme leggero attraversa anche le fiabe di questo libro, dove ogni animale sembra avere una piccola casa interiore da costruire: una valigia, una vasca da bagno, un nido, una tavola apparecchiata, un ramo da cui scivolare.</p>
+        <p class="mt-3 text-sm leading-relaxed text-left font-bold" style="color:var(--leaf);">Con Il Camaleonte Anadesivo firma il suo primo libro di fiabe.</p>
+      </article>
+      <article class="stagger-item card relative rounded-[1.75rem] p-7 pt-8 text-center" style="--i:1; background:var(--paper); border:3px solid var(--sky); box-shadow:0 6px 0 -1px rgba(43,32,21,.08), 0 8px 18px -8px rgba(43,32,21,.2);">
+        <img src="author-nicola-posa.png" alt="Ritratto illustrato di Nicola Posa" class="w-40 h-auto rounded-[1.25rem] mb-5 mx-auto" style="border:3px solid var(--sky); background:#fff;">
+        <h3 class="display text-2xl font-bold" style="color:var(--sky);">Nicola Posa</h3>
+        <p class="hand text-lg mt-1" style="color:var(--ink-soft);">Autore</p>
+        <p class="mt-3 text-sm leading-relaxed text-left" style="color:var(--ink-soft);">Consulente, formatore e autore, da oltre venticinque anni si occupa di comunicazione, relazione e comportamenti, lavorando con aziende, professionisti e gruppi di persone. Ha pubblicato libri dedicati al consiglio, al linguaggio e al ruolo delle parole nelle relazioni professionali.</p>
+        <p class="mt-3 text-sm leading-relaxed text-left font-bold" style="color:var(--sky);">Con Il Camaleonte Anadesivo si avvicina alla scrittura per bambini, portando nelle fiabe il suo interesse per le domande, le differenze e i modi imprevisti con cui ciascuno cerca il proprio posto nel mondo.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section id="acquista" class="relative overflow-hidden" style="background:linear-gradient(160deg, var(--coral) 0%, var(--berry) 100%);">
+  <div class="doodle-wrap hidden sm:block" style="left:5%; top:12%; width:44px;">
+    <svg class="doodle twinkle" style="--r:-10deg; color:var(--gold);" viewBox="0 0 40 40"><path d="M20 2c1.5 6 3 7.5 9 9-6 1.5-7.5 3-9 9-1.5-6-3-7.5-9-9 6-1.5 7.5-3 9-9Z" fill="currentColor"/></svg>
+  </div>
+  <div class="doodle-wrap hidden sm:block" style="right:6%; bottom:16%; width:38px;">
+    <svg class="doodle soft twinkle" style="--r:12deg; color:#fff;" viewBox="0 0 40 40"><path d="M20 2c1.5 6 3 7.5 9 9-6 1.5-7.5 3-9 9-1.5-6-3-7.5-9-9 6-1.5 7.5-3 9-9Z" fill="currentColor" opacity=".8"/></svg>
+  </div>
+  <div class="doodle-wrap hidden lg:block" style="right:20%; top:8%; width:52px;">
+    <svg class="doodle drift" style="color:#fff; opacity:.5;" viewBox="0 0 64 36"><g fill="currentColor"><circle cx="18" cy="20" r="10"/><circle cx="30" cy="13" r="12"/><circle cx="43" cy="19" r="9"/><rect x="14" y="19" width="34" height="12" rx="6"/></g></svg>
+  </div>
+
+  <div class="wrap py-16 md:py-20 text-center relative" style="z-index:1;">
+    <div class="stagger">
+      <h2 class="stagger-item display text-3xl sm:text-4xl md:text-5xl font-extrabold text-white" style="--i:0;">Pronti a incontrare il Camaleonte Anadesivo?</h2>
+      <p class="stagger-item mt-4 text-lg text-white/90 max-w-xl mx-auto" style="--i:1;">Disponibile in libreria, online e ovunque si vendano storie da leggere, ridere e colorare.</p>
+      <div class="stagger-item mt-8 flex flex-wrap justify-center gap-4" style="--i:2;">
+        <a href="#" class="btn" style="background:#fff; color:var(--coral-ink);">
+          Acquista ora
+        </a>
+        <a href="#storia" class="btn" style="background:transparent; color:#fff; border:3px solid #fff; box-shadow:0 6px 0 0 rgba(0,0,0,.15);">
+          Leggi un'anteprima
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer style="background:var(--ink); color:var(--paper);">
+  <div style="height:7px; background:linear-gradient(90deg, var(--coral), var(--sun), var(--gold), var(--leaf), var(--teal), var(--sky), var(--plum), var(--berry), var(--pink));"></div>
+  <div class="wrap py-14">
+    <div class="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
+      <div>
+        <img src="shackleton-logo-negativo.svg" alt="Shackleton Group" class="h-14 w-auto mb-4" style="object-fit:contain;">
+        <p class="display text-2xl font-bold">Il Camaleonte Anadesivo</p>
+        <p class="text-sm mt-2 opacity-70 max-w-xs">di Lino Giorgini e Nicola Posa — un libro Shackleton Group</p>
+      </div>
+      <div>
+        <p class="hand text-xl mb-3" style="color:var(--sun);">Link</p>
+        <ul class="space-y-2 text-sm font-bold">
+          <li><a href="#storia" class="hover:underline">La storia</a></li>
+          <li><a href="#personaggi" class="hover:underline">Personaggi</a></li>
+          <li><a href="#acquista" class="hover:underline">Acquista</a></li>
+          <li><a href="colora.html" class="hover:underline">Colora online</a></li>
+          <li><a href="chi-siamo.html" class="hover:underline">Chi siamo</a></li>
+          <li><a href="contatti.html" class="hover:underline">Contatti</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="hand text-xl mb-3" style="color:var(--sky);">Legale</p>
+        <ul class="space-y-2 text-sm font-bold">
+          <li><a href="privacy-policy.html" class="hover:underline">Privacy Policy</a></li>
+          <li><a href="cookie-policy.html" class="hover:underline">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-10 pt-6" style="border-top:1px solid rgba(246,239,220,.15);">
+      <p class="text-xs opacity-50">© 2026 Shackleton Group. Pagina dimostrativa non ufficiale — testi segnaposto da personalizzare.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="site.js"></script>

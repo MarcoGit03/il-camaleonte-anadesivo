@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Colora il Camaleonte — Il Camaleonte Anadesivo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,600;1,700&family=Caveat:wght@600;700&display=swap">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="styles.css">
+
+<!-- ============ HEADER ============ -->
+<header class="relative" style="background:var(--paper); z-index:2;">
+  <div class="wrap py-4 flex items-center justify-between gap-4">
+    <a href="camaleonte-anadesivo-landing.html" class="inline-flex items-center">
+      <img src="shackleton-logo-color.png" alt="Shackleton Group" class="h-11 md:h-16 w-auto" style="object-fit:contain;">
+    </a>
+    <a href="camaleonte-anadesivo-landing.html" class="hand text-lg md:text-xl font-bold" style="color:var(--coral-ink);">← Torna al libro</a>
+  </div>
+</header>
+
+<!-- ============ CONTENUTO ============ -->
+<section class="page-hero relative overflow-hidden">
+  <div class="wash" style="right:-6%; top:-4%; width:300px; height:300px; background:var(--leaf); opacity:.16;"></div>
+  <div class="wash" style="left:-6%; bottom:-4%; width:260px; height:260px; background:var(--sun); opacity:.16;"></div>
+
+  <div class="wrap relative py-12 md:py-16" style="z-index:1;">
+    <div class="stagger max-w-2xl mx-auto text-center">
+      <span class="stagger-item hand text-2xl" style="--i:0; color:var(--teal);">matite alla mano</span>
+      <h1 class="stagger-item display text-4xl md:text-5xl font-extrabold mt-1" style="--i:1;">Colora il Camaleonte</h1>
+      <p class="stagger-item mt-4 text-lg" style="--i:2; color:var(--ink-soft);">Scegli un colore dalla palette qui sotto. Da computer tieni premuto il tasto sinistro del mouse e trascina per disegnare una striscia di colore; su tablet e smartphone basta strisciare il dito sul disegno. Buon divertimento!</p>
+
+    <!-- palette -->
+    <div class="stagger-item no-print mt-8 mx-auto" style="--i:3; max-width:640px;">
+      <div class="rounded-[1.5rem] p-4" style="background:var(--paper); border:3px solid var(--paper-3); box-shadow:var(--card-shadow);">
+        <div id="palette" class="flex flex-wrap items-center justify-center gap-3">
+          <button type="button" class="swatch selected" data-color="#4F8A2A" style="background:#4F8A2A;" aria-label="Verde" title="Verde"></button>
+          <button type="button" class="swatch" data-color="#8CC63F" style="background:#8CC63F;" aria-label="Verde chiaro" title="Verde chiaro"></button>
+          <button type="button" class="swatch" data-color="#EFAF1E" style="background:#EFAF1E;" aria-label="Giallo" title="Giallo"></button>
+          <button type="button" class="swatch" data-color="#EE9A2B" style="background:#EE9A2B;" aria-label="Arancione" title="Arancione"></button>
+          <button type="button" class="swatch" data-color="#DE2B2B" style="background:#DE2B2B;" aria-label="Rosso" title="Rosso"></button>
+          <button type="button" class="swatch" data-color="#E85D80" style="background:#E85D80;" aria-label="Rosa" title="Rosa"></button>
+          <button type="button" class="swatch" data-color="#7C4E9E" style="background:#7C4E9E;" aria-label="Viola" title="Viola"></button>
+          <button type="button" class="swatch" data-color="#2A6CA3" style="background:#2A6CA3;" aria-label="Blu" title="Blu"></button>
+          <button type="button" class="swatch" data-color="#8B5E3C" style="background:#8B5E3C;" aria-label="Marrone" title="Marrone"></button>
+          <button type="button" class="swatch" data-color="#1F1B16" style="background:#1F1B16;" aria-label="Nero" title="Nero"></button>
+          <button type="button" class="swatch swatch-eraser" data-eraser="true" aria-label="Gomma (cancella colore)" title="Gomma"></button>
+        </div>
+        <div id="brushSizes" class="flex items-center justify-center gap-3 mt-4 pt-4" style="border-top:2px solid var(--paper-3);">
+          <span class="hand text-lg mr-1" style="color:var(--ink-soft);">Spessore</span>
+          <button type="button" class="brush-size" data-size="14" aria-label="Tratto sottile" title="Sottile"><span style="width:9px; height:9px;"></span></button>
+          <button type="button" class="brush-size selected" data-size="28" aria-label="Tratto medio" title="Medio"><span style="width:15px; height:15px;"></span></button>
+          <button type="button" class="brush-size" data-size="44" aria-label="Tratto grande" title="Grande"><span style="width:21px; height:21px;"></span></button>
+          <button type="button" class="brush-size" data-size="64" aria-label="Tratto molto grande" title="Molto grande"><span style="width:28px; height:28px;"></span></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- drawing -->
+    <div class="stagger-item mt-8 mx-auto rounded-[1.75rem] p-4 md:p-8" style="--i:4; max-width:700px; background:var(--paper); border:3px solid var(--paper-3); box-shadow:var(--card-shadow);">
+      <div id="canvasWrap" class="relative" style="width:100%; touch-action:none;">
+        <canvas id="paintCanvas" width="1032" height="923" style="width:100%; height:auto; display:block; border-radius:.75rem; cursor:crosshair;"></canvas>
+        <img src="chameleon-lineart.png" alt="Disegno da colorare del Camaleonte Anadesivo" style="position:absolute; inset:0; width:100%; height:100%; pointer-events:none;">
+      </div>
+    </div>
+
+    <div class="stagger-item no-print mt-8 flex flex-wrap justify-center gap-4" style="--i:5;">
+      <button type="button" id="resetBtn" class="btn btn-outline">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 12a8 8 0 1 1 2.34 5.66" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M4 20v-6h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Ricomincia
+      </button>
+      <button type="button" id="printBtn" class="btn" style="background:var(--sky); color:#fff;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M7 8V3h10v5" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="M7 17H4a1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-3" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="M7 14h10v7H7z" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg>
+        Stampa il disegno
+      </button>
+    </div>
+    </div>
+  </div>
+
+  <svg class="block w-full relative no-print" style="height:56px; color:var(--paper-2); z-index:1;" viewBox="0 0 1440 60" preserveAspectRatio="none">
+    <path fill="currentColor" d="M0,30 Q80,10 160,30 T320,30 T480,30 T640,30 T800,30 T960,30 T1120,30 T1280,30 T1440,30 L1440,60 L0,60 Z"/>
+  </svg>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="no-print" style="background:var(--ink); color:var(--paper);">
+  <div style="height:7px; background:linear-gradient(90deg, var(--coral), var(--sun), var(--gold), var(--leaf), var(--teal), var(--sky), var(--plum), var(--berry), var(--pink));"></div>
+  <div class="wrap py-14">
+    <div class="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
+      <div>
+        <img src="shackleton-logo-negativo.svg" alt="Shackleton Group" class="h-14 w-auto mb-4" style="object-fit:contain;">
+        <p class="display text-2xl font-bold">Il Camaleonte Anadesivo</p>
+        <p class="text-sm mt-2 opacity-70 max-w-xs">di Lino Giorgini e Nicola Posa — un libro Shackleton Group</p>
+      </div>
+      <div>
+        <p class="hand text-xl mb-3" style="color:var(--sun);">Link</p>
+        <ul class="space-y-2 text-sm font-bold">
+          <li><a href="camaleonte-anadesivo-landing.html#storia" class="hover:underline">La storia</a></li>
+          <li><a href="camaleonte-anadesivo-landing.html#personaggi" class="hover:underline">Personaggi</a></li>
+          <li><a href="camaleonte-anadesivo-landing.html#acquista" class="hover:underline">Acquista</a></li>
+          <li><a href="colora.html" class="hover:underline">Colora online</a></li>
+          <li><a href="chi-siamo.html" class="hover:underline">Chi siamo</a></li>
+          <li><a href="contatti.html" class="hover:underline">Contatti</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="hand text-xl mb-3" style="color:var(--sky);">Legale</p>
+        <ul class="space-y-2 text-sm font-bold">
+          <li><a href="privacy-policy.html" class="hover:underline">Privacy Policy</a></li>
+          <li><a href="cookie-policy.html" class="hover:underline">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-10 pt-6" style="border-top:1px solid rgba(246,239,220,.15);">
+      <p class="text-xs opacity-50">© 2026 Shackleton Group. Pagina dimostrativa non ufficiale — testi segnaposto da personalizzare.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+<script>
+  (function(){
+    var currentColor = '#4F8A2A';
+    var isEraser = false;
+    var palette = document.getElementById('palette');
+    var swatches = palette.querySelectorAll('.swatch');
+
+    swatches.forEach(function(btn){
+      btn.addEventListener('click', function(){
+        swatches.forEach(function(b){ b.classList.remove('selected'); });
+        btn.classList.add('selected');
+        isEraser = btn.hasAttribute('data-eraser');
+        if (!isEraser) currentColor = btn.getAttribute('data-color');
+      });
+    });
+
+    // ---- brush size ----
+    var BRUSH = 28;
+    var sizeButtons = document.querySelectorAll('#brushSizes .brush-size');
+    sizeButtons.forEach(function(btn){
+      btn.addEventListener('click', function(){
+        sizeButtons.forEach(function(b){ b.classList.remove('selected'); });
+        btn.classList.add('selected');
+        BRUSH = parseInt(btn.getAttribute('data-size'), 10);
+      });
+    });
+
+    // ---- painting canvas ----
+    var canvas = document.getElementById('paintCanvas');
+    var ctx = canvas.getContext('2d');
+
+    var mask = new Image();
+    var maskReady = false;
+    mask.onload = function(){ maskReady = true; };
+    mask.src = 'chameleon-mask.png';
+
+    function applyMask(){
+      if (!maskReady) return;
+      ctx.globalCompositeOperation = 'destination-in';
+      ctx.drawImage(mask, 0, 0, canvas.width, canvas.height);
+      ctx.globalCompositeOperation = 'source-over';
+    }
+
+    function getPos(evt){
+      var rect = canvas.getBoundingClientRect();
+      var scaleX = canvas.width / rect.width;
+      var scaleY = canvas.height / rect.height;
+      var clientX, clientY;
+      if (evt.touches && evt.touches.length){
+        clientX = evt.touches[0].clientX;
+        clientY = evt.touches[0].clientY;
+      } else if (evt.changedTouches && evt.changedTouches.length){
+        clientX = evt.changedTouches[0].clientX;
+        clientY = evt.changedTouches[0].clientY;
+      } else {
+        clientX = evt.clientX;
+        clientY = evt.clientY;
+      }
+      return { x: (clientX - rect.left) * scaleX, y: (clientY - rect.top) * scaleY };
+    }
+
+    function dot(pos){
+      ctx.globalCompositeOperation = isEraser ? 'destination-out' : 'source-over';
+      ctx.fillStyle = currentColor;
+      ctx.beginPath();
+      ctx.arc(pos.x, pos.y, BRUSH / 2, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.globalCompositeOperation = 'source-over';
+    }
+
+    function line(from, to){
+      ctx.globalCompositeOperation = isEraser ? 'destination-out' : 'source-over';
+      ctx.strokeStyle = currentColor;
+      ctx.lineWidth = BRUSH;
+      ctx.lineCap = 'round';
+      ctx.lineJoin = 'round';
+      ctx.beginPath();
+      ctx.moveTo(from.x, from.y);
+      ctx.lineTo(to.x, to.y);
+      ctx.stroke();
+      ctx.globalCompositeOperation = 'source-over';
+    }
+
+    var painting = false;
+    var last = null;
+
+    function start(evt){
+      evt.preventDefault();
+      painting = true;
+      last = getPos(evt);
+      dot(last);
+      applyMask();
+    }
+    function move(evt){
+      if (!painting) return;
+      evt.preventDefault();
+      var pos = getPos(evt);
+      line(last, pos);
+      last = pos;
+      applyMask();
+    }
+    function stop(){
+      painting = false;
+      last = null;
+    }
+
+    canvas.addEventListener('mousedown', start);
+    window.addEventListener('mousemove', move);
+    window.addEventListener('mouseup', stop);
+
+    canvas.addEventListener('touchstart', start, { passive: false });
+    canvas.addEventListener('touchmove', move, { passive: false });
+    canvas.addEventListener('touchend', stop);
+    canvas.addEventListener('touchcancel', stop);
+
+    document.getElementById('resetBtn').addEventListener('click', function(){
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    });
+
+    document.getElementById('printBtn').addEventListener('click', function(){
+      window.print();
+    });
+  })();
+</script>
