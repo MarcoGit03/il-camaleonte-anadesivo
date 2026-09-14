@@ -11,9 +11,7 @@
 <!-- ============ HEADER ============ -->
 <header class="relative" style="background:var(--paper); z-index:2;">
   <div class="wrap py-4 flex items-center justify-between gap-4">
-    <a href="camaleonte-anadesivo-landing.html" class="inline-flex items-center">
-      <img src="shackleton-logo-color.png" alt="Shackleton Group" class="h-11 md:h-16 w-auto" style="object-fit:contain;">
-    </a>
+    <span></span>
     <a href="camaleonte-anadesivo-landing.html" class="hand text-lg md:text-xl font-bold" style="color:var(--coral-ink);">← Torna al libro</a>
   </div>
 </header>
@@ -54,56 +52,6 @@
       </div>
     </div>
 
-    <div class="stagger">
-    <p class="stagger-item mt-8 text-lg max-w-2xl" style="--i:0; color:var(--ink-soft);">Preferisci parlare del libro, di una formazione o di una consulenza? Scrivici: ti rispondiamo entro 24 ore (lunedì–venerdì).</p>
-
-    <!-- success message (shown after submit) -->
-    <div id="formSuccess" class="stagger-item mt-8 max-w-2xl rounded-[1.5rem] p-6 md:p-8 text-center" style="--i:1; display:none; background:var(--paper); border:3px solid var(--leaf); box-shadow:var(--card-shadow);">
-      <p class="display text-2xl font-bold" style="color:var(--leaf);">Messaggio inviato!</p>
-      <p class="mt-2" style="color:var(--ink-soft);">Grazie per averci scritto: ti risponderemo entro 24 ore (lunedì–venerdì).</p>
-    </div>
-
-    <!-- form -->
-    <form id="contactForm" class="stagger-item mt-8 max-w-2xl rounded-[1.5rem] p-6 md:p-8" style="--i:1; background:var(--paper); border:3px solid var(--paper-3); box-shadow:var(--card-shadow);" action="https://formsubmit.co/info@shackleton.it" method="POST">
-      <input type="hidden" name="_subject" value="Nuovo messaggio dal sito — Il Camaleonte Anadesivo">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_next" value="contatti.html?inviato=1">
-      <input type="text" name="_honey" style="position:absolute; left:-9999px;" tabindex="-1" autocomplete="off">
-      <div class="grid gap-5 sm:grid-cols-2">
-        <div>
-          <label class="field-label" for="nome">Nome e cognome *</label>
-          <input class="field" id="nome" name="nome" type="text" placeholder="Il tuo nome e cognome" required>
-        </div>
-        <div>
-          <label class="field-label" for="email">Email *</label>
-          <input class="field" id="email" name="email" type="email" placeholder="La tua email" required>
-        </div>
-        <div>
-          <label class="field-label" for="telefono">Telefono</label>
-          <input class="field" id="telefono" name="telefono" type="tel" placeholder="Il tuo numero di telefono">
-        </div>
-        <div>
-          <label class="field-label" for="argomento">Argomento *</label>
-          <select class="field" id="argomento" name="argomento" required>
-            <option value="" selected>Seleziona un argomento</option>
-            <option>Il Camaleonte Anadesivo</option>
-            <option>Formazione e consulenza</option>
-            <option>Eventi e speaker</option>
-            <option>Altro</option>
-          </select>
-        </div>
-      </div>
-      <div class="mt-5">
-        <label class="field-label" for="messaggio">Messaggio *</label>
-        <textarea class="field" id="messaggio" name="messaggio" rows="5" placeholder="Scrivi qui il tuo messaggio" required></textarea>
-      </div>
-      <label class="mt-5 flex items-start gap-2 text-sm" style="color:var(--ink-soft);">
-        <input type="checkbox" required class="mt-1">
-        <span>Ho letto e accetto la <a href="privacy-policy.html" class="font-bold hover:underline" style="color:var(--ink);">Privacy Policy</a> *</span>
-      </label>
-      <button type="submit" class="btn btn-primary mt-6">Invia messaggio</button>
-    </form>
-    </div>
   </div>
 
   <svg class="block w-full relative" style="height:56px; color:var(--paper-2); z-index:1;" viewBox="0 0 1440 60" preserveAspectRatio="none">
@@ -117,9 +65,8 @@
   <div class="wrap py-14">
     <div class="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
       <div>
-        <img src="shackleton-logo-negativo.svg" alt="Shackleton Group" class="h-14 w-auto mb-4" style="object-fit:contain;">
         <p class="display text-2xl font-bold">Il Camaleonte Anadesivo</p>
-        <p class="text-sm mt-2 opacity-70 max-w-xs">di Lino Giorgini e Nicola Posa — un libro Shackleton Group</p>
+        <p class="text-sm mt-2 opacity-70 max-w-xs">di Lino Giorgini e Nicola Posa<br>Un libro Shackleton Group</p>
       </div>
       <div>
         <p class="hand text-xl mb-3" style="color:var(--sun);">Link</p>
@@ -128,7 +75,7 @@
           <li><a href="camaleonte-anadesivo-landing.html#personaggi" class="hover:underline">Personaggi</a></li>
           <li><a href="camaleonte-anadesivo-landing.html#acquista" class="hover:underline">Acquista</a></li>
           <li><a href="colora.html" class="hover:underline">Colora online</a></li>
-          <li><a href="chi-siamo.html" class="hover:underline">Chi siamo</a></li>
+          <li><a href="chi-siamo.html" class="hover:underline">Nota degli Autori</a></li>
           <li><a href="contatti.html" class="hover:underline">Contatti</a></li>
         </ul>
       </div>
@@ -147,18 +94,3 @@
 </footer>
 
 <script src="site.js"></script>
-<script>
-  (function(){
-    if (window.location.search.indexOf('inviato=1') !== -1){
-      var form = document.getElementById('contactForm');
-      var success = document.getElementById('formSuccess');
-      if (form) form.style.display = 'none';
-      if (success){
-        success.style.display = 'block';
-        var staggerParent = success.closest('.stagger');
-        if (staggerParent) staggerParent.classList.add('in-view');
-        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
-    }
-  })();
-</script>
